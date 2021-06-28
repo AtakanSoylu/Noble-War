@@ -8,6 +8,13 @@ namespace NobleWar.PlayerControls
 
     public class PlayerMovementSettings : ScriptableObject
     {
-        public float PlayerSpeed = 5;
+        [SerializeField] private float _playerSpeed = 5;
+        public float PlayerSpeed { get { return _playerSpeed; } }
+
+        [SerializeField] private float _lerpSpeed = 5;
+        public float LerpSpeed { get { return _lerpSpeed; } }
+
+        public float CurrentSpeed;
+
     }
 }

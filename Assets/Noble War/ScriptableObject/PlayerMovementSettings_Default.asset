@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a86ee4d5cee22479a25b9fa6506bb2, type: 3}
   m_Name: PlayerMovementSettings_Default
   m_EditorClassIdentifier: 
-  _playerSpeed: 5
-  CurrentSpeed: 0.021358866
+  _playerSpeed: 8
+  _lerpSpeed: 10
+  CurrentSpeed: 3.5764057e-32

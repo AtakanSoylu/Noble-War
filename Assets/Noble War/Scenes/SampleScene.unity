@@ -660,11 +660,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7283295558690529821, guid: 33a04e5959a288844a50cf5beed2d249, type: 3}
   m_PrefabInstance: {fileID: 1192559502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1234239443 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8651079041389218796, guid: 6c6b88b1f1a85d742bf14955a9a90c55, type: 3}
-  m_PrefabInstance: {fileID: 550109282}
-  m_PrefabAsset: {fileID: 0}
 --- !u!143 &1234239445 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 8651079041389218379, guid: 6c6b88b1f1a85d742bf14955a9a90c55, type: 3}
@@ -675,22 +670,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8651079041389218344, guid: 6c6b88b1f1a85d742bf14955a9a90c55, type: 3}
   m_PrefabInstance: {fileID: 550109282}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1234239447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234239443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eeed630c44bd5f429c45d1e73167025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputData: {fileID: 11400000, guid: ff8475fb9a7db8f45939234cb4b01c24, type: 2}
-  _playerMovementSettings: {fileID: 11400000, guid: b7760dde9ea446f448f8343742ed5575, type: 2}
-  _characterController: {fileID: 1234239445}
-  _playerAnimator: {fileID: 1707226246}
 --- !u!1001 &1253733969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,6 +880,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1707226247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707226244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eeed630c44bd5f429c45d1e73167025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputData: {fileID: 11400000, guid: ff8475fb9a7db8f45939234cb4b01c24, type: 2}
+  _playerMovementSettings: {fileID: 11400000, guid: b7760dde9ea446f448f8343742ed5575, type: 2}
+  _characterController: {fileID: 1234239445}
+  _playerAnimator: {fileID: 1707226246}
 --- !u!1 &2096495986
 GameObject:
   m_ObjectHideFlags: 0

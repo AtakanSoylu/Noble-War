@@ -15,8 +15,8 @@ MonoBehaviour:
   Horizontal: 0
   Vertical: 0
   _axisActive: 1
-  AxisNameHorizontal: 
-  AxisNameVertical: 
+  AxisNameHorizontal: Horizontal
+  AxisNameVertical: Vertical
   _keyBaseHorizontalActive: 0
   PositiveHorizontalKeyCode: 0
   NegativeHorizontalKeyCode: 0

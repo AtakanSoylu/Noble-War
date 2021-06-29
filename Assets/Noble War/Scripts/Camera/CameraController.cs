@@ -10,13 +10,13 @@ namespace NobleWar.Camera
         [SerializeField] private Transform _targetTranform;
         [SerializeField] private Transform _cameraTranform;
 
-        private void FixedUpdate()
+
+        private void Update()
         {
             CameraRotationFollow();
             CameraMovementFollow();
         }
 
-        
 
         private void CameraRotationFollow()
         {
@@ -30,7 +30,7 @@ namespace NobleWar.Camera
 
         private void CameraMovementFollow()
         {
-            _cameraTranform.localPosition = _cameraSettings.PositionOffset;
+            _cameraTranform.localPosition = Vector3.Lerp(_cameraTranform.localPosition, _targetTranform.localPosition +_cameraSettings.PositionOffset, Time.deltaTime * _cameraSettings.RotationLerpSpeed);
         }
     }
 }

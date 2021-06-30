@@ -8,6 +8,9 @@ namespace NobleWar.Inventory
 
     public class PlayerInventoryWeaponItemData : AbstractPlayerInventoryItemData<PlayerInventoryWeaponItemMono>
     {
+        [SerializeField] private float _damage;
+        public float Damage { get { return _damage; } }
+
         public override void CreateIntoInventory(PlayerInventoryController targetPlayerInventory)
         {
             var instantiated = InstantiateAndInitializePrefab(targetPlayerInventory.Parent);

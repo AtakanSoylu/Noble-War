@@ -13,6 +13,11 @@ namespace NobleWar.Stat
         {
             DamageableList.Add(damageable.InstanceId, damageable);
         }
+
+        public static void DestroyDamageable(this IDamageable damageable)
+        {
+            DamageableList.Remove(damageable.InstanceId);
+        }
     }
 
 

@@ -8,6 +8,7 @@ namespace NobleWar.Stat
     {
         [SerializeField] private Collider _colidder;
         public int InstanceId { get; private set; }
+        public float Health = 100;
 
         protected virtual void Awake()
         {
@@ -15,9 +16,15 @@ namespace NobleWar.Stat
             this.InitializeDamageable();
         }
 
+        protected virtual void Destroy()
+        {
+            this.DestroyDamageable();
+        }
+
         public virtual void Damage(float dmg)
         {
-            Debug.Log("you damage me : " + dmg);
+            Health -= dmg;
+            Debug.Log("Health: " + Health);
         }
 
 

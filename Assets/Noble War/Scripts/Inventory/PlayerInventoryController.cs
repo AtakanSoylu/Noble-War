@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+
 
 namespace NobleWar.Inventory
 {
@@ -12,6 +14,7 @@ namespace NobleWar.Inventory
 
         public Transform Parent;
 
+        public ReactiveCommand ReactiveShootCommand { get; private set; }
         private void Start()
         {
             InitializeInventory(_inventoryItemDataArray);
@@ -24,13 +27,22 @@ namespace NobleWar.Inventory
 
         public void InitializeInventory(AbstractBasePlayerInventoryItemData[] inventoryItemDataArray)
         {
-            ClearInventory();
+            if (ReactiveShootCommand != null)
+            {
+                //adjusting reactive command
+                ReactiveShootCommand.Dispose();
+            }
+            ReactiveShootCommand = new ReactiveCommand();
 
+            //Clear old inventory
+            ClearInventory();
             _instantiatedItemDataList = new List<AbstractBasePlayerInventoryItemData>(_inventoryItemDataArray.Length);
+
+
             for (int i = 0; i < inventoryItemDataArray.Length; i++)
             {
                 var instantiated = Instantiate(inventoryItemDataArray[i]);
-                instantiated.CreateIntoInventory(this);
+                instantiated.Initialize(this);
                 _instantiatedItemDataList.Add(instantiated);
             }
         }

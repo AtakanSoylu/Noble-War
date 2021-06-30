@@ -15,7 +15,6 @@ namespace NobleWar
         {
             if(_shootInput.Horizontal > 0)
             {
-                Debug.Log("girdi");
                 _inventoryController.ReactiveShootCommand.Execute();
             }
         }

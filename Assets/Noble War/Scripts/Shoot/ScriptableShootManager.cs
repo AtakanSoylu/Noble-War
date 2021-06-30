@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NobleWar.Inventory;
 using UnityEngine;
+using NobleWar.Stat;
 
 namespace NobleWar.Shoot
 {
@@ -28,6 +29,11 @@ namespace NobleWar.Shoot
             if (physic)
             {
                 Debug.Log("Collier : " + rHit.collider.name);
+                int colliderInstanceId = rHit.collider.GetInstanceID();
+                if (DamageableHelper.DamageableList.ContainsKey(colliderInstanceId))
+                {
+                    DamageableHelper.DamageableList[colliderInstanceId].Damage(10);
+                }
             }
         }
     }

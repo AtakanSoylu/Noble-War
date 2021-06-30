@@ -13,7 +13,12 @@ namespace NobleWar.Inventory
 
         public override void CreateIntoInventory(PlayerInventoryController targetPlayerInventory)
         {
-            var instantiated = InstantiateAndInitializePrefab(targetPlayerInventory.Parent);
+            InstantiateAndInitializePrefab(targetPlayerInventory.Parent);
+        }
+
+        public void Shoot()
+        {
+            _instantiated.Shoot();
         }
     }
 }

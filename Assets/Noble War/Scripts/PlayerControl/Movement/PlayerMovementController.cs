@@ -18,6 +18,14 @@ namespace NobleWar.PlayerControls
             CharacterRotation();
         }
 
+        public void InitializeInput(InputData inputData)
+        {
+            _inputData = inputData;
+        }
+
+
+
+
         private void CharacterMovement()
         {
             Vector3 move = new Vector3(_inputData.Horizontal, 0, _inputData.Vertical);

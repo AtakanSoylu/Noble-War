@@ -26,7 +26,7 @@ namespace NobleWar.PlayerInput
         [SerializeField] private float _increaseAmount = 0.015f;
 
 
-        public void ProcessInput()
+        public virtual void ProcessInput()
         {
             if (_axisActive)
             {
